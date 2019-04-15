@@ -8,7 +8,7 @@ export class Input extends BaseFragment {
     this.container.clearValue();
     browser.pause(50);
     console.log("Type into ", this.container["selector"], "=>", value);
-    this.container.setValue(value);
+    this.container.setValue(value);    
   }
 
 }

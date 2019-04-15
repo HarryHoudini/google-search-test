@@ -9,8 +9,4 @@ export class BaseFragment {
   constructor(_container: () => WebdriverIO.Element) {
     this._container = _container;
   }
-  public el 
-  get elem() {
-    return $(this.el);
-  }
 }

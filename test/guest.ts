@@ -1,8 +1,12 @@
-import { expect } from "chai";
-import { ProductDetails, Checkout, Confirmation } from "../PageObjects";
+import { Search, SearchResult,RbcMain } from "../PageObjects";
 
 describe("Guest", function() {
   it("search rbc.ru", function() {
-   Sea
+    Search.open()
+    Search.searchMode.enterSearchText({searchText: "РБК"})
+    Search.pressEnter()
+    SearchResult.ResultContains('www.rbc.ru')
+    SearchResult.open()
+    RbcMain.checkRedirect()
   });
 });

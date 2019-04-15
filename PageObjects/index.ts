@@ -1,2 +1,3 @@
-export { SearchPO, search } from "./search";
-export { SearchResultPO, searchResult } from "./searchResult";
+export { SearchPO, Search } from "./search";
+export { SearchResultPO, SearchResult } from "./searchResult";
+export {RbcMainPO, RbcMain} from "./rbcMain"
