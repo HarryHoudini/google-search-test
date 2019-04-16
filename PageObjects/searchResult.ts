@@ -3,7 +3,7 @@ export class SearchResultPO extends BasePO {
   private get searchResult() {
     return $("#res #search");
   }
-  private resul;
+  public desiredURL;
   ResultContains(urlTarget: string): string {
     this.searchResult.waitForDisplayed(10000);
     let findUrl = this.searchResult
@@ -11,11 +11,11 @@ export class SearchResultPO extends BasePO {
       .map(idx => idx.getText())
       .filter(idx => idx.includes(urlTarget) === true)
       .toString();
-    this.resul = findUrl;
+    this.desiredURL = findUrl;
     return findUrl;
   }
   open() {
-    super.open(this.resul);
+    super.open(this.desiredURL);
   }
 
 }
