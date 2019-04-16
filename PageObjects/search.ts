@@ -2,12 +2,14 @@ import { BasePO } from "./base";
 import { SearchMode } from "./Fragments/searchType";
 
 export class SearchPO extends BasePO {
-  public searchMode: SearchMode; 
-   constructor() {
+  public searchMode: SearchMode;
+  constructor() {
     super();
-    this.searchMode = new SearchMode("#tsf .RNNXgb");        
+    this.searchMode = new SearchMode("#tsf .RNNXgb");
   }
-  private get searchButtons () { return $('#tsf .FPdoLc')}  
+  private get searchButtons() {
+    return $("#tsf .FPdoLc");
+  }
   open() {
     super.open("https://www.google.com/");
   }

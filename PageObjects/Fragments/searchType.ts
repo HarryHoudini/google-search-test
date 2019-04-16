@@ -8,18 +8,16 @@ export class SearchMode {
   protected searchLine: Input = new Input(() => {
     return this.container.$("input");
   });
-  
+
   constructor(containerLocator: string) {
     this.containerLocator = containerLocator;
   }
   enterSearchText(searchMode: ISearchText) {
     $(this.containerLocator).waitForDisplayed(10000); // invisibility of loader
-    this.searchLine.type(searchMode.searchText); 
-    $('#tsf [role="listbox"]').waitForDisplayed(10000)
+    this.searchLine.type(searchMode.searchText);
+    $('#tsf [role="listbox"]').waitForDisplayed(10000);
   }
-
 }
-
 export interface ISearchText {
   searchText: string;
 }
